@@ -1,8 +1,14 @@
 body{
-    margin: 10px;
     background: #ccc
 }
 
+h1 {
+    font-size: 63px;
+    font-family: 'Bernier';
+    color: #455a64;
+}
+
+@import 'common/fonts';
 @import 'common/technologies';
 @import 'common/slider';
 @import 'common/menu';

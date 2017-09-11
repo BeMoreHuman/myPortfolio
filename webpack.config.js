@@ -3,7 +3,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');//минифициру
 
 const config = {
   output: {
-    filename: 'bundle.js'//то куда мы хотим положить наш итоговый файл js
+    filename: 'bundle.js'//то как мы хотим назвать наш итоговый файл js
   },
   plugins: [
     new UglifyJSPlugin({
