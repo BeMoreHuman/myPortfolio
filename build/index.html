@@ -13,13 +13,46 @@
     <script src="/assets/scripts/bundle.js" defer></script>
   </head>
   <body>
-    <h1>Главная</h1>
-    <h2>Меню</h2>
-    <ul class="menu">
-      <li><a href="/index.html">Главная</a></li>
-      <li><a href="/about.html">Обо мне</a></li>
-      <li><a href="/my-works.html">Мои работы</a></li>
-      <li><a href="/blog.html">Блог</a></li>
-    </ul>
+    <div class="wrapper">
+      <div class="maincontent">
+        <div class="welcome-wrapper section">
+          <div class="welcom-login"><a class="welcome-login_btn" href="#">Авторизоваться</a></div>
+          <div class="welcome-block">
+            <div class="welcome-block_wrap">
+              <div class="welcome-block_info">
+                <div class="info-selfie"><img class="info-pic" src="assets/images/me.jpg" alt="my_photo"></div>
+                <div class="info-name">Александр Клименко</div>
+                <div class="info-desc"> Личный сайт веб разработчика</div>
+              </div>
+              <div class="welcome-block_social">
+                <ul class="social-nav">
+                  <li class="social-list">
+                    <svg class="social-item social-item_vk" width="100" height="100">
+                      <use xlink:href="assets/images/sprite.svg#vk"></use>
+                    </svg>
+                    <svg class="social-item social-item_github" width="100" height="100">
+                      <use xlink:href="assets/images/sprite.svg#github"></use>
+                    </svg>
+                    <svg class="social-item social-item_in" width="100" height="100">
+                      <use xlink:href="assets/images/sprite.svg#in"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="welcome-nav">
+              <ul class="welcome-nav-list">
+                <li class="welcome-nav-item"><a class="welcome-nav-link" href="/my-works.html">Мои работы</a></li>
+                <li class="welcome-nav-item"><a class="welcome-nav-link" href="/about.html">Обо мне</a></li>
+                <li class="welcome-nav-item"><a class="welcome-nav-link" href="/blog.html">Блог</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="welcome-footer">
+            <div class="footer-text">© Александр Клименко | создано с любовью в LoftSchool | 2017</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

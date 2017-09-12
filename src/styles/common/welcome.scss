@@ -1,0 +1,196 @@
+.wrapper {
+	width: 100%; 
+	height: 100%;
+	position: relative;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.maincontent {
+	height: 100%;
+	min-height: 650px;
+}
+
+.section {
+	height: 100%;
+	background-color: rgba(87, 151, 229, 0.31);
+    min-height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+	height: 100%;
+	width: 95%;
+	max-width: 940px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.welcome-wrapper {
+    background-image: url('../images/bg_welcome.jpg');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: cover;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+//top btn
+.welcom-login {
+    position: absolute;
+    top: 5%;
+    right: 7%;
+}
+
+.welcome-login_btn {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Roboto';
+    font-weight: 600;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 15px 25px;
+    transition: .3s ease;
+}
+
+.welcome-login_btn:hover {
+    background: #fff;
+    color: $accent;
+}
+
+//content block
+.welcome-block {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    opacity: .85;
+    overflow: hidden;
+}
+
+//block about
+.welcome-block_wrap {
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    padding: 0 48px 40px;
+}
+
+.welcome-block_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    margin-top: 35px;
+}
+
+.info-selfie {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.info-pic {
+    border-radius: 50%;
+}
+
+.info-name {
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 28px;
+    color: $main;
+    margin-top: 15px;
+}
+
+//social
+.welcome-block_social {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.social-item {
+    margin: 0 13px;
+    fill: $accent;
+    opacity: .5;
+    transition: .3s ease;
+
+    &_vk {
+        width: 31px;
+        height: 17px;
+    }
+
+    &_github {
+        width: 26px;
+        height: 22px;
+    }
+
+    &_in {
+        width: 24px;
+        height: 22px;
+    }
+}
+
+.social-item:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+//menu
+.welcome-nav {
+    display: flex;
+}
+
+.welcome-nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: #fff;
+}
+
+.welcome-nav-item {
+    background: $accent;
+    display: flex;
+    flex-basis: 33%;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: .3s ease;
+}
+
+.welcome-nav-item:hover {
+    cursor: pointer;
+    background: $hov;
+}
+
+.welcome-nav-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0;
+}
+
+//footer
+.welcome-footer {
+    position: absolute;
+    bottom: 5%;
+}
+
+.footer-text {
+    color: #fff;
+    font-family: 'Roboto';
+    font-weight: 300;
+}

@@ -4,4 +4,34 @@ block variables
   - var title = 'Добро пожаловать'
 
 block content
-  h1 Главная
+  .wrapper
+    .maincontent
+      div(class="welcome-wrapper section")
+        .welcom-login
+          a.welcome-login_btn(href="#") Авторизоваться
+        .welcome-block
+          .welcome-block_wrap
+            .welcome-block_info
+              .info-selfie
+                img.info-pic(src="assets/images/me.jpg", alt="my_photo")
+              .info-name Александр Клименко
+              .info-desc  Личный сайт веб разработчика
+            .welcome-block_social
+              ul.social-nav
+                li.social-list
+                  svg(width="100" height="100" class="social-item social-item_vk")
+                    use(xlink:href="assets/images/sprite.svg#vk")
+                  svg(width="100" height="100" class="social-item social-item_github")
+                    use(xlink:href="assets/images/sprite.svg#github")
+                  svg(width="100" height="100" class="social-item social-item_in")
+                    use(xlink:href="assets/images/sprite.svg#in")
+          .welcome-nav
+            ul.welcome-nav-list
+              li.welcome-nav-item
+                a.welcome-nav-link(href="/my-works.html") Мои работы
+              li.welcome-nav-item
+                a.welcome-nav-link(href="/about.html") Обо мне
+              li.welcome-nav-item
+                a.welcome-nav-link(href="/blog.html") Блог
+        .welcome-footer
+          .footer-text © Александр Клименко | создано с любовью в LoftSchool | 2017

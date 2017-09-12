@@ -1,14 +1,60 @@
-body{
-    background: #ccc
+//config
+@import 'common/variables';
+@import 'common/mixin';
+// Layout
+@import 'common/fonts';
+
+body {
+    height: 100%;
+    margin: 0;
+	padding: 0;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+	line-height: 1.42;
+	color: $main;
+}
+
+*, *::before, *::after { 
+	box-sizing: border-box; 
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+.visuallyhidden:not(:focus):not(:active) {
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+
+	white-space: nowrap;
+
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
 h1 {
     font-size: 63px;
     font-family: 'Bernier';
-    color: #455a64;
+    color: $dark;
 }
 
-@import 'common/fonts';
+
 @import 'common/technologies';
 @import 'common/slider';
 @import 'common/menu';
+@import 'common/welcome';
