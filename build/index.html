@@ -2,15 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Добро пожаловать</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
     <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/assets/styles/app.min.css">
-    <script src="/assets/scripts/bundle.js" defer></script>
+    <link rel="stylesheet" href="./assets/styles/app.min.css">
+    <script src="./assets/scripts/bundle.js" defer></script>
+    <title>Добро пожаловать!</title>
   </head>
   <body>
     <div class="wrapper">
@@ -22,31 +22,35 @@
               <div class="welcome-block_info">
                 <div class="info-selfie"><img class="info-pic" src="assets/images/me.jpg" alt="my_photo"></div>
                 <div class="info-name">Александр Клименко</div>
-                <div class="info-desc"> Личный сайт веб разработчика</div>
+                <div class="info-desc">Личный сайт веб разработчика</div>
               </div>
-              <div class="welcome-block_social">
-                <ul class="social-nav">
-                  <li class="social-list">
-                    <svg class="social-item social-item_vk" width="100" height="100">
+              <div class="top-social">
+                <ul class="top-social__list">
+                  <li class="top-social__item">
+                    <svg class="top-social__svg top-social__svg-vk" width="100" height="100">
                       <use xlink:href="assets/images/sprite.svg#vk"></use>
                     </svg>
-                    <svg class="social-item social-item_github" width="100" height="100">
+                  </li>
+                  <li class="top-social__item">
+                    <svg class="top-social__svg top-social__svg-github" width="100" height="100">
                       <use xlink:href="assets/images/sprite.svg#github"></use>
                     </svg>
-                    <svg class="social-item social-item_in" width="100" height="100">
+                  </li>
+                  <li class="top-social__item">
+                    <svg class="top-social__svg top-social__svg-in" width="100" height="100">
                       <use xlink:href="assets/images/sprite.svg#in"></use>
                     </svg>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="welcome-nav">
-              <ul class="welcome-nav-list">
-                <li class="welcome-nav-item"><a class="welcome-nav-link" href="/my-works.html">Мои работы</a></li>
-                <li class="welcome-nav-item"><a class="welcome-nav-link" href="/about.html">Обо мне</a></li>
-                <li class="welcome-nav-item"><a class="welcome-nav-link" href="/blog.html">Блог</a></li>
+            <nav class="welcome-nav">
+              <ul class="welcome-nav__list">
+                <li class="welcome-nav__item"><a class="welcome-nav__link" href="/my-works.html">Мои Работы</a></li>
+                <li class="welcome-nav__item"><a class="welcome-nav__link" href="/about.html">Обо Мне</a></li>
+                <li class="welcome-nav__item"><a class="welcome-nav__link" href="/blog.html">Блог</a></li>
               </ul>
-            </div>
+            </nav>
           </div>
           <div class="welcome-footer">
             <div class="footer-text">© Александр Клименко | создано с любовью в LoftSchool | 2017</div>

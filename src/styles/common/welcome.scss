@@ -109,35 +109,40 @@
 }
 
 //social
-.welcome-block_social {
+.top-social__list {
     display: flex;
     justify-content: center;
     margin-top: 35px;
 }
 
-.social-item {
+.top-social__item {
+    display: flex;
+    align-items: center;
+}
+
+.top-social__svg {
     margin: 0 13px;
     fill: $accent;
     opacity: .5;
     transition: .3s ease;
 
-    &_vk {
+    &-vk {
         width: 31px;
         height: 17px;
     }
 
-    &_github {
+    &-github {
         width: 26px;
         height: 22px;
     }
 
-    &_in {
+    &-in {
         width: 24px;
         height: 22px;
     }
 }
 
-.social-item:hover {
+.top-social__svg:hover {
     opacity: 1;
     cursor: pointer;
 }
@@ -147,7 +152,7 @@
     display: flex;
 }
 
-.welcome-nav-list {
+.welcome-nav__list {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -155,7 +160,7 @@
     background: #fff;
 }
 
-.welcome-nav-item {
+.welcome-nav__item {
     background: $accent;
     display: flex;
     flex-basis: 33%;
@@ -167,12 +172,12 @@
     transition: .3s ease;
 }
 
-.welcome-nav-item:hover {
+.welcome-nav__item:hover {
     cursor: pointer;
     background: $hov;
 }
 
-.welcome-nav-link {
+.welcome-nav__link {
     color: #FFFFFF;
     text-decoration: none;
     display: flex;
