@@ -1,9 +1,92 @@
 extends ../template
 
 block title
-	title Кто Я
+	title Кто Я!
 
 block content
-	h1 Обо мне
-	include ../common/technologies
-	include ../common/menu
+	section.section.hero
+		.hero__socials
+			ul.socials
+				each item in ['vk', 'fb', 'in']
+					li.socials__item
+						a(href="" class=`socials__item socials__item_${item}`)
+		.hero__title
+			.section-title
+				img(src="", alt="").section-title__pic
+			.user.hero__user
+				.user__pic
+					img.user__pic-img
+				.user__description
+					.user__name Владимир Астахов
+					.user__info Личный сайт разработчика
+		.hamburger.hero__menu
+		.arrow-down.hero__scroll-btn
+	section.section.about
+		.about__left
+			.triangle.tringle_fill_white.about__left-triangle
+			.about__left-title
+				.block-title Обо мне
+			.about__left-content
+				.user-description
+					.user-description__image
+						img.user-description__avatar
+					.user-description__title
+						.block-subtitle Кто я
+					.user-description__text.text-content
+						p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+						p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+		.about__right
+			.triangle.tringle_fill_beige.about__right-triangle
+			.about__right-title
+				.block-subtitle Чем я могу быть вам полезен
+			.about__right-text.text-content
+				p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+			.about__right-content
+				ul.skills-list
+					each item in ['Frontend', 'Backend', 'Workflow']
+						li.skills-list__item
+							.skills-row
+								.skills-row__title #{item}
+								ul.skills-row__list
+									each skill in ['Html5', 'css3', 'JavaScript']
+										li.skills-row__item
+											.skill
+												svg.skill__circle
+												.skill__title #{skill}
+	section.section.map
+		.google-map
+		.map__contacts
+			.contacts
+				.contacts__title
+					.block-subtitle Контакты
+				ul.contacts__list
+					- 
+						var contacts = [
+							['skype', 'skype_kdn'],
+							['mail', 'astahov@gmail.com'],
+							['phone', '+79211 123 23 23'],
+							['mark', 'Новосибирск'],
+						]
+					each contact in contacts
+						li.contacts__item
+							.contacts-row
+								.contacts-row__icon #{contact[0]}
+								.contacts-row__content #{contact[1]}
+	footer.map__footer.footer
+		.footer__row
+			.container
+				.footer__col.footer__col-left
+					nav.menu
+				.footer__col.footer__col-right
+					ul.socials.socials_rounded
+						each item in ['vk', 'fb', 'in']
+							li.socials__item
+								a(href="" class=`socials__item socials__item_${item}`)
+		.footer__row
+			.container
+				.footer__col.footer__col-left
+					.footer__text
+						p Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+				.footer__col.footer__col-right
+					.footer__text.footer__text_margin_top
+						p Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
