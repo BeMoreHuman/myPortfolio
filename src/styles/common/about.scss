@@ -5,3 +5,105 @@
     position: relative;
     width: 100%;
 }
+
+.social-top {
+    position: absolute;
+    left: 3%;
+    top: 5%;
+}
+
+.social-top__list {
+    display: flex;
+    justify-content: center;
+}
+
+.social-top__item {
+    display: flex;
+    align-items: center;
+}
+
+.social-top__svg {
+    margin: 0 13px;
+    fill: #fff;
+    opacity: .5;
+    transition: .3s ease;
+
+    &-vk {
+        width: 31px;
+        height: 17px;
+    }
+
+    &-github {
+        width: 26px;
+        height: 22px;
+    }
+
+    &-in {
+        width: 24px;
+        height: 22px;
+    }
+}
+
+.social-top__svg:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+// .shade {
+//     background-color: #016672;
+//     opacity: .3;
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     justify-content: center;
+//     display: flex;
+//     align-items: center;
+// }
+
+.section-title__pic--portfolio_header {
+    fill: #fff;
+    fill-opacity: .06;
+    width: 1175px;
+    height: 314px;
+}
+
+.hero__title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user {
+    position: absolute;
+}
+
+.hero__user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user__pic {
+    display: flex;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user__description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.user__name {
+    font-weight: 600;
+    font-size: 35px;
+    color: #fff;
+}
+
+.user__info {
+    font-weight: 300;
+    opacity: .8;
+    color: #fff;
+}

@@ -5,20 +5,18 @@ block title
 
 block content
 	section.section.hero
-		.hero__socials
-			ul.socials
-				each item in ['vk', 'fb', 'in']
-					li.socials__item
-						a(href="" class=`socials__item socials__item_${item}`)
+		+social('social-top', ['vk', 'github', 'in'])
 		.hero__title
 			.section-title
-				img(src="", alt="").section-title__pic
-			.user.hero__user
-				.user__pic
-					img.user__pic-img
-				.user__description
-					.user__name Владимир Астахов
-					.user__info Личный сайт разработчика
+				svg(width="100" height="100" class="section-title__pic--portfolio_header")
+					use(xlink:href="assets/images/sprite.svg#portfolio_header")
+			.user
+				.hero__user
+					.user__pic
+						img.user__pic-img(src="assets/images/me.jpg", alt="my_photo")
+					.user__description
+						.user__name Александр Клименко
+						.user__info Личный сайт разработчика
 		.hamburger.hero__menu
 		.arrow-down.hero__scroll-btn
 	section.section.about

@@ -1,16 +1,16 @@
-.social-top__list {
+.social-welcome__list {
     display: flex;
     justify-content: center;
     margin-top: 35px;
     margin-bottom: 40px;
 }
 
-.social-top__item {
+.social-welcome__item {
     display: flex;
     align-items: center;
 }
 
-.social-top__svg {
+.social-welcome__svg {
     margin: 0 13px;
     fill: $accent;
     opacity: .5;
@@ -32,7 +32,7 @@
     }
 }
 
-.social-top__svg:hover {
+.social-welcome__svg:hover {
     opacity: 1;
     cursor: pointer;
 }
