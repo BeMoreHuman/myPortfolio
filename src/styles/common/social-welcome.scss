@@ -10,6 +10,10 @@
     align-items: center;
 }
 
+.social-welcome__link {
+    text-decoration: none;
+}
+
 .social-welcome__svg {
     margin: 0 13px;
     fill: $accent;

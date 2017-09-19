@@ -1,0 +1,43 @@
+.social-bottom {
+	display: flex;
+}
+
+.social-bottom__list {
+	display: flex;
+	justify-content: center;
+}
+
+.social-bottom__item {
+	display: flex;
+	align-items: center;
+}
+
+.social-bottom__link {
+	margin: 0 13px;
+}
+
+.social-bottom__svg {
+	fill: #fff;
+	opacity: .5;
+	transition: .3s ease;
+
+	&-vk {
+		width: 31px;
+		height: 17px;
+	}
+
+	&-github {
+		width: 26px;
+		height: 22px;
+	}
+
+	&-in {
+		width: 24px;
+		height: 22px;
+	}
+}
+
+.social-bottom__svg:hover {
+	opacity: 1;
+	cursor: pointer;
+}

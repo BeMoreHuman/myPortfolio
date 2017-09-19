@@ -13,13 +13,54 @@ mixin welcomeMenu(className)
                     a(class=`${className}__link` href=`${href}`)= title
 
 
-mixin social(className, items)
+mixin footerMenu(className)
+    - 
+        var items = {
+            "Мои Работы": './my-works.html',
+            "Обо Мне": './about.html',
+            "Блог": './blog.html',
+            "Авторизация": './index.html'
+        }
+
+    nav(class=`${className}`)
+        ul(class=`${className}__list`)
+            each href, title in items
+                li(class=`${className}__item`)
+                    a(class=`${className}__link` href=`${href}`)= title
+
+
+mixin social(className)
+    - 
+        var items = {
+            "https://new.vk.com/id18787062": 'vk',
+            "https://github.com/BeMoreHuman": 'github',
+            "https://www.linkedin.com/in/alexandr-klymenko-069561128/": 'in'
+        }
 
     div(class=`${className}`)
         ul(class=`${className}__list`)
-            each item in items
+            each title, href in items
                 li(class=`${className}__item`)
-                    svg(width="100" height="100" class=`${className}__svg ${className}__svg-${item}`)
-                        use(xlink:href=`assets/images/sprite.svg#${item}`)
+                    a(class=`${className}__link` href=`${href}`)
+                        svg(width="100" height="100" class=`${className}__svg ${className}__svg-${title}`)
+                            use(xlink:href=`assets/images/sprite.svg#${title}`)
+
+
+mixin socialBottom(className)
+    - 
+        var items = {
+            "https://new.vk.com/id18787062": 'vk_round',
+            "https://github.com/BeMoreHuman": 'github_round',
+            "https://www.linkedin.com/in/alexandr-klymenko-069561128/": 'in_round'
+        }
+
+    div(class=`${className}`)
+        ul(class=`${className}__list`)
+            each title, href in items
+                li(class=`${className}__item`)
+                    a(class=`${className}__link` href=`${href}`)
+                        svg(width="35" height="35" class=`${className}__svg ${className}__svg-${title}`)
+                            use(xlink:href=`assets/images/sprite.svg#${title}`)
+
 
 

@@ -9,13 +9,13 @@ block content
 			.login
 				a(class="login__btn login__btn_welcome" href="#") Авторизоваться
 			.block-main
-				.user-description
-					.user-description__image
-						img.user-description__avatar(src="assets/images/me.jpg", alt="my_photo")
-					.user-description__title Александр Клименко
-					.user-description__text.text-content
+				.user-header
+					.user-header__image.user-header__image--welcome
+						img.user-header__avatar(src="assets/images/me.jpg", alt="my_photo")
+					h3.user-header__title.user-header__title--welcome Александр Клименко
+					.user-header__text.user-header__text--welcome
 						p Личный сайт веб разработчика
-				+social('social-welcome', ['vk', 'github', 'in'])
+				+social('social-welcome')
 				+welcomeMenu('menu-welcome')
 			footer.footer-welcome
 				.footer-text

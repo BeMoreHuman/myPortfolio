@@ -8,10 +8,14 @@
     position: relative;
     height: 100vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 //top btn
 .login {
+    display: flex;
     position: absolute;
     top: 5%;
     right: 7%;
@@ -44,32 +48,47 @@
 }
 
 //block about user
-.user-description {
+.user-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     height: fit-content;
-    margin-top: 35px;
-    padding: 0 48px;
 }
-
-.user-description__image {
+//вынести в общий
+.user-header__image {
     display: flex;
     justify-content: center;
     overflow: hidden;
-}
-
-.user-description__avatar {
     border-radius: 50%;
 }
 
-.user-description__title {
-    font-family: 'Roboto';
-    font-weight: 600;
+.user-header__image--welcome {
+    margin-top: 35px;
+}
+//вынести в общий
+.user-header__title {
     font-size: 28px;
+    color: #fff;
+}
+
+.user-header__title--welcome {
     color: $main;
+    padding: 0 48px;
     margin-top: 15px;
+}
+//вынести в общий
+.user-header__text {
+    font-weight: 200;
+    color: #fff;
+    opacity: .8;
+    display: flex;
+	flex-direction: column;
+}
+
+.user-header__text--welcome {
+    font-weight: 400;
+    color: $main;
 }
 
 //footer
@@ -80,6 +99,5 @@
 
 .footer-text {
     color: #fff;
-    font-family: 'Roboto';
-    font-weight: 300;
+    font-weight: 200;
 }

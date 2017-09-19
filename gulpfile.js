@@ -94,7 +94,7 @@ function toSvg() {
                     $('[style]').removeAttr('style');
                 },
                 parserOptions: {
-                    xmlMode: true
+                    xmlMode: true,
                 }
             })
         )
@@ -104,14 +104,14 @@ function toSvg() {
                 symbol: {
                     sprite: "../sprite.svg",
                     example: {
-                        dest: '../tmp/spriteSvgDemo.html' // демо html
+                        dest: '../tmp/spriteSvgDemo.html',// демо html
                     }
                 }
             }
         }))
         .pipe(notify('Sprite created successfully'))
         .pipe(plumber.stop())
-        .pipe(gulp.dest(paths.sprite.dest))
+        .pipe(gulp.dest(paths.sprite.dest));
 }
 
 // переносим картинки favicon
@@ -133,7 +133,7 @@ function imageMinify() {
         .pipe(imageMin())
         .pipe(notify('Images compressed successfully'))
         .pipe(plumber.stop())
-        .pipe(gulp.dest(paths.images.dest))
+        .pipe(gulp.dest(paths.images.dest));
 }
 
 // pug - функция описывающая что мы будем делать с исходниками; return - указываем что мы Возвращаем в поток
@@ -154,13 +154,13 @@ function styles() {
         .pipe(sass({outputStyle: 'compressed', includePaths: require('node-normalize-scss').includePaths}))//сжимаем/ минификацию производим
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
-            cascade: false
+            cascade: false,
         }))//добавляем префиксы для поддержки старых браузеров
         .pipe(sourcemaps.write())//записываем сорсмап
         .pipe(rename({suffix: '.min'}))//и пепеименовываем наш файл добавив префикс min
         .pipe(notify('Sass convert successfully'))
         .pipe(plumber.stop())
-        .pipe(gulp.dest(paths.styles.dest))//и кладем его/ выкидываем из Трубы в папку назначения paths.styles.dest = build/assets/styles
+        .pipe(gulp.dest(paths.styles.dest));//и кладем его/ выкидываем из Трубы в папку назначения paths.styles.dest = build/assets/styles
 }
 
 // webpack - минифицируем файл js и добавляем сорсмапу...

@@ -45,3 +45,37 @@
     align-items: center;
     padding: 12px 0;
 }
+//Menu on Page About
+.menu-footer {
+    display: flex;
+    margin: 40px 0 30px;
+}
+
+.menu-footer__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-footer__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: .3s ease;
+    margin-right: 40px;
+}
+
+.menu-footer__link {
+    color: #FFFFFF;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        cursor: pointer;
+        color: $accent;
+    }
+}

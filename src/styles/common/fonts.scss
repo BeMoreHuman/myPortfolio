@@ -1,6 +1,8 @@
 @font-face {
     font-family: 'Bernier';
     src: url('../../fonts/BERNIERRegular-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
@@ -13,14 +15,14 @@
 @font-face {
     font-family: 'Roboto';
     src: url('../../fonts/Roboto-Light.woff') format('woff');
-    font-weight: 300;
+    font-weight: 200;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Roboto';
     src: url('../../fonts/Roboto-Medium.woff') format('woff');
-    font-weight: 600;
+    font-weight: 500;
     font-style: normal;
 }
 
