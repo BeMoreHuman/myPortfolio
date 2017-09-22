@@ -1,7 +1,6 @@
-//section hero
 @import 'social-top';
 @import 'social-bottom';
-
+//section hero
 .hero {
 	background-image: url('../images/bg_welcome.jpg');
 	background-repeat: no-repeat;
@@ -85,15 +84,17 @@
     width: 100%;
     top: 0;
     left: 0;
-    transform: translateY(-93%);
+	transform: translateY(-93%);
+	
+	&__left {
+		fill: #efeee9;
+	};
+
+	&__right {
+		fill: #eeebdf;
+	};
 }
 
-.triangle__left{
-	fill: #efeee9;
-}
-.triangle__right{
-	fill: #eeebdf;
-}
 //left side
 .about__left-title {
 	display: flex;

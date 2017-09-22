@@ -1,0 +1,24 @@
+@keyframes swing
+{
+        0% {
+            transform: translate(-50%,-50%);
+      }
+        20% {
+            transform: translate(-50%,-50%);
+      }
+        50% {
+            transform: translate(-50%,-150%);
+      }
+        80% {
+            transform: translate(-50%,-50%);
+      }
+        100% {
+            transform: translate(-50%,-50%);
+      }
+        40% {
+            transform: translate(-50%,100%);
+      }
+        60% {
+            transform: translate(-50%,25%);
+      }
+}

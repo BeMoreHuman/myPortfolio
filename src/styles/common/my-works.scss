@@ -1,0 +1,363 @@
+@import 'common/animation';
+//section works
+.works {
+    position: relative;
+	width: 100%;
+	background-color: #BDB8B8;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.works-title {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 20%;
+	background-color: #faf8f0;
+}
+
+.section-title__pic--works_header {
+	width: 500px;
+    height: 160px;
+	fill: #6d7070;
+	fill-opacity: .07;
+	position: absolute;
+	left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.traingle__svg {
+	fill: #faf8f0;
+}
+
+.worsk-slider {
+	width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+	align-items: stretch;
+	background-color: #f0efe9;
+}
+
+.slider-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+	align-items: center;
+	width: 50%;
+}
+
+.slider-content__block {
+	width: 420px;
+	text-align: center;
+}
+
+.block-content {
+	margin-bottom: 40px;
+}
+
+.block-text p {
+	color: $accent;
+	font-weight: 500;
+	border-top: 1px solid $accent;
+	border-bottom: 1px solid $accent;
+	padding: 20px 0;
+}
+
+.look {
+	display: flex;
+    justify-content: center;
+}
+
+.look__btn {
+	position: relative;
+	background-color: $accent;
+	text-decoration: none;
+    color: #fff;
+    font-family: 'Roboto';
+    font-weight: 500;
+    border: 1px solid $accent;
+    border-radius: 5px;
+    padding: 10px 30px 10px 35px;
+    transition: .3s ease;
+
+    &:hover {
+        background-color: #fff;
+        color: $accent;
+	}
+	
+	&:hover .look__btn-svg--link {
+		fill: $accent;
+        fill-opacity: 1;
+    }
+}
+
+.look__btn-svg {
+	position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(10px,10px);
+}
+
+.look__btn-svg--link {
+	fill: #fff;
+	fill-opacity: .2;
+	transition: .3s ease;
+}
+
+.slider-image {
+	height: 70%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	background-color: #efebe0;
+	width: 50%;
+}
+
+.thumb__wrap {
+	display: flex;
+	justify-content: space-between;
+	height: 30%;
+	width: 50%;
+	background-color: #efebe0;
+}
+
+.slider-thumb {
+	position: relative;
+	width: 100%;
+	flex-basis: 49.9%;
+}
+
+.slider-thumb__link {
+	display: flex;
+	height: 100%;
+
+	&:hover {
+		cursor: pointer;
+	}
+	
+	&:hover .slider-thumb__arrow {
+		animation: swing 2s infinite ease;
+	}
+}
+
+.slider-thumb__img {
+	width: 100%;
+}
+
+.slider-thumb__filter {
+	background-color: #b6b4ae;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: .7;
+}
+
+.slider-thumb__arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+	fill: #fff;
+	filter: drop-shadow(0 0 3px #373e42);
+}
+
+//section testimonials
+.testimonials {
+	background-color: #fff;
+	background-image: url('../images/work_bg_bottom.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	height: auto;
+    padding-bottom: 170px;
+}
+
+.testimonials-title {
+	width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 230px;
+    align-items: center;
+}
+
+.block-title--testimonials {
+	width: 275px;
+	text-align: center;
+}
+
+.testimonials-title__pic--about_header {
+	width: 500px;
+    height: 170px;
+	fill: #6d7070;
+	fill-opacity: .07;
+	position: absolute;
+	left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.testimonials-wrap {
+	width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    align-items: center;
+}
+
+.testimonials-col__list {
+	width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.testimonials-col__item {
+	width: 370px;
+	height: 240px;
+	margin-left: 35px;
+}
+
+.block-testimonials {
+	margin-top: 30px;
+}
+
+.block-author {
+	display: flex;
+    align-items: center;
+	flex-wrap: wrap;
+	margin-top: 30px;
+}
+
+.author__img {
+	border-radius: 50%;
+    overflow: hidden;
+    height: 80px;
+    width: 80px;
+}
+
+.about__author {
+	margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.author__name {
+	text-align: center;
+	color: $accent;
+	font-weight: 700;
+}
+
+.author__post {
+	text-align: center;
+	color: $accent;
+}
+
+.testimonials__form {
+	width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 380px;
+    height: 460px;
+	position: relative;
+	margin-bottom: 70px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.blur {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.15);
+    background-image: url('../images/work_bg_bottom.png');
+    background-repeat: no-repeat;
+    background-size: 1800px 1200px;
+    background-position: -716px -506px;
+    filter: blur(20px);
+}
+
+.review-form {
+	position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3px 3px 0 0;
+}
+
+.review-form__inputs {
+	width: 100%;
+	padding: 0 20px;
+}
+
+.review-form__input {
+	width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    outline: 0;
+    border-radius: 3px;
+    transition: border .3s;
+}
+
+.review-form__textarea {
+	width: 100%;
+    height: 140px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    outline: 0;
+    border-radius: 3px;
+    transition: border .3s;
+    resize: none;
+}
+
+.review-form__btns {
+	display: flex;
+    width: 100%;
+}
+
+.review-form__btn {
+    flex-grow: 1;
+    outline: 0;
+    border: 0;
+    display: block;
+    font-weight: 500;
+    padding: 12.5px 25px;
+    background-color: $accent;
+    transition: .3s;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+	border-right: 2px solid #82cfc9;
+	
+	&:hover {
+		background-color: $hov;
+	}
+
+	&:first-child {
+		border-bottom-left-radius: 5px;
+	}
+
+	&:last-child {
+		border-right: none;
+		border-bottom-right-radius: 5px;
+	}
+}

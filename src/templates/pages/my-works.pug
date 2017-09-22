@@ -1,9 +1,118 @@
 extends ../template
 
 block title
-  title мои роботы
+	title Да да, это сделал Я!
 
 block content
-  h1 Мои работы
-
-  include ../common/menu.pug
+	section.section.hero
+		.filter
+		+social('social-top', ['vk', 'github', 'in'])
+		.hero__title
+			.section-title
+				svg(width="100" height="100" class="section-title__pic--portfolio_header")
+					use(xlink:href="assets/images/sprite.svg#portfolio_header")
+			.user
+				.user-header
+					.user-header__image
+						img.user-header__avatar(src="assets/images/me.jpg", alt="my_photo")
+					h3.user-header__title Александр Клименко
+					.user-header__text
+						p Личный сайт веб разработчика
+		.hamburger.hero__menu
+		.arrow-down
+			a.hero__scroll-btn(href="#")
+				svg(width="100" height="100" class="hero__scroll-btn--arrow_down")
+					use(xlink:href="assets/images/sprite.svg#arrow_down")
+	section.section.works
+		.works-title
+			h1.block-title Мои работы
+				svg(width="100" height="100" class="section-title__pic--works_header")
+					use(xlink:href="assets/images/sprite.svg#works_header")
+			.triangle
+				svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle__svg")
+					polygon(points="0,0   0,86   500.8,86   500.8,75.5")
+					polygon(points="1000,0   1000,86   500,86   500,75.5")
+		.worsk-slider
+			.slider-content
+				.slider-content__block
+					h2.block-subtitle Сайт школы онлайн образования
+					.block-content.text-content
+						p HTML , CSS , JAVASCRIPT
+					.look
+						a(class="look__btn look__btn_works" href="#") Посмотреть сайт
+							svg(width="21" height="21" class="look__btn-svg look__btn-svg--link")
+								use(xlink:href="assets/images/sprite.svg#link")
+			.slider-image
+				img.slider-image__pic(src="assets/images/work_1.png"  alt="my-work")
+			.thumb__wrap
+				.slider-thumb
+					a.slider-thumb__link.slider-thumb__link--left
+						img.slider-thumb__img(src="assets/images/work_2.png" alt="my-work")
+						.slider-thumb__filter
+						svg(width="44" height="30" class="slider-thumb__arrow slider-thumb-prev")
+							use(xlink:href="assets/images/sprite.svg#portf_arrow_down")
+				.slider-thumb
+					a.slider-thumb__link.slider-thumb__link--right
+						img.slider-thumb__img(src="assets/images/work_3.png", alt="my-work")
+						.slider-thumb__filter
+						svg(width="44" height="30" class="slider-thumb__arrow slider-thumb-next")
+							use(xlink:href="assets/images/sprite.svg#portf_arrow_up")
+	section.section.testimonials
+		.testimonials-title
+			h1.block-title.block-title--testimonials Что обо мне говорят
+				svg(width="100" height="100" class="testimonials-title__pic--about_header")
+					use(xlink:href="assets/images/sprite.svg#about_header")
+		.testimonials-wrap
+			ul.testimonials-col__list
+				li.testimonials-col__item
+					.testimonials-quotes
+						img.author__img--pic(src="assets/images/quote_1.png", alt="quote")
+					.block-testimonials.text-content
+						p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+					.block-author
+						.author__img
+							img.author__img--pic(src="assets/images/review_1.jpg", alt="visitor_photo")
+						.about__author
+							.author__name
+								p Ковальчук Дмитрий
+							.author__post
+								p основатель Loftschool
+				li.testimonials-col__item
+					.testimonials-quotes
+						img.author__img--pic(src="assets/images/quote_1.png", alt="quote")
+					.block-testimonials.text-content
+						p Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!
+					.block-author
+						.author__img
+							img.author__img--pic(src="assets/images/review_2.jpg", alt="visitor_photo")
+						.about__author
+							.author__name
+								p Владимир Сабанцев
+							.author__post
+								p преподаватель
+		.testimonials__form
+			.blur
+			form.review-form
+				h2.block-subtitle Связаться со мной
+				.review-form__inputs
+					input.review-form__input(type="text" placeholder="Имя" name="contactName" required="required")
+					input.review-form__input(type="text" placeholder="Email" name="contactName" required="required")
+					textarea.review-form__textarea#reviewMessage(placeholder="Ваше сообщение" name="contactMessage")
+				.review-form__btns
+					button.review-form__btn#reviewButton(type="submit") Отправить
+					button.review-form__btn(type="reset") Очистить
+	footer.map__footer.footer
+		.footer__row
+			.container
+				.footer__col.footer__col-left
+					+footerMenu('menu-footer')
+				.footer__col.footer__col-right
+					+socialBottom('social-bottom')
+		.footer__row
+			.container
+				.footer__col.footer__col-left
+					.footer__text
+						p Я веб-разработчик из Днепра, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+				.footer__col.footer__col-right
+					.footer__text
+						p © Клименко Александр | создано с любовью в LoftSchool | 2017
