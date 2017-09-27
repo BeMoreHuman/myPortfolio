@@ -63,4 +63,24 @@ mixin socialBottom(className)
                             use(xlink:href=`./assets/images/sprite.svg#${title}`)
 
 
+mixin skills(options)
+    ul.skills-list
+        each item, index in options
+            li.skills-list__item.skills-row
+                h3.skills-row__title #{index}
+                ul.skills-row__list
+                    each skill, skillName in item
+                        li.skills-row__item.skill
+                            svg.skill__circle.circle(viewBox='0 0 110 110')
+                                circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+                                circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class=`circle__second circle-${skill}`)
+                            h4.skill__title #{skillName}
+
+- 
+    var objSkill = {
+        "Frontend": { "html": "90", "css": "90", "javascript": "50" },
+        "Backend": { "php": "10", "mongo.db": "90", "node.js": "50", "mySql": "50" },
+        "Workflow": { "git": "90", "gulp": "90", "webpack": "50" }
+    }
+
 

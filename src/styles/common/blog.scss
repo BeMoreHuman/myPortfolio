@@ -1,0 +1,133 @@
+//seaction header
+.blog-header {
+    background-image: url('../images/bg_welcome.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+    width: 100%;
+    height: auto;
+    // min-height: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.section-title__pic--blog_header {
+    width: 300px;
+    height: 210px;
+	fill: #fff;
+	fill-opacity: .07;
+	position: absolute;
+	left: 50%;
+    top: 75%;
+    transform: translate(-50%,-50%);
+}
+
+.block-title--blog {
+    margin: 0;
+    color: #fff;
+
+    &:before {
+		background-color: #fff;
+	}
+
+	&:after {
+        background-color: #fff;
+	}
+}
+
+.user-header__text--blog {
+    opacity: 1;
+}
+//seaction blog
+.blog {
+    background-color: #fff;
+    position: relative;
+    height: auto;
+    padding-bottom: 170px;
+    padding-top: 25px;
+    display: flex;
+}
+
+.traingle__svg--white {
+    fill: #fff;
+}
+
+.blog-menu__wrap {
+    display: flex;
+    flex-basis: 25%;
+}
+
+.blog-menu {
+    width: 100%;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.blog-menu__list {
+    margin-left: 45%;
+    margin-top: 40px;
+}
+
+.blog-menu__item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &Active {
+        color: $accent;
+        font-weight: 700;
+    }
+
+    &Active .blog-menu__link:after {
+        display: block;
+        content: " ";
+        position: absolute;
+        width: 3px;
+        background-color: $accent;
+        height: 100%;
+        right: -15px;
+        top: 0;
+        }
+}
+
+.blog-menu__link {
+    position: relative;
+    margin: 20px 0;
+    width: 100%;
+
+    &:hover {
+        color: $hov;
+        cursor: pointer;
+    }
+}
+
+.blog-post__wrap {
+    display: flex;
+    flex-basis: 75%;
+    padding-left: 100px;
+}
+
+.blog-post__list {
+    width: 884px;
+    padding-bottom: 65px;
+}
+
+.blog-post__title {
+    margin-bottom: 30px;
+
+    &:before {
+        display: none;
+    }
+
+    &:after {
+        display: none;
+    }
+}
+
+.blog-post__date {
+    margin-bottom: 30px;
+    color: $accent;
+    opacity: .7;
+}
+

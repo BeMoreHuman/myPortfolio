@@ -84,7 +84,7 @@
     width: 100%;
     top: 0;
     left: 0;
-	transform: translateY(-93%);
+	transform: translateY(-87%);
 	
 	&__left {
 		fill: #efeee9;
@@ -106,6 +106,7 @@
 .block-title {
 	display: flex;
 	font-family: 'Bernier';
+	font-weight: 500;
 	font-size: 63px;
 	color: $dark;
 	margin: 70px 0;
@@ -176,6 +177,7 @@
 .block-subtitle {
 	position: relative;
 	font-family: 'Bernier';
+	font-weight: 400;
 	font-size: 35px;
 	margin: 40px 0;
 

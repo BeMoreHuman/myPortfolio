@@ -8,15 +8,51 @@ block content
 		.section.welcome
 			.login
 				a(class="login__btn login__btn_welcome" href="#") Авторизоваться
-			.block-main
-				.user-header
-					.user-header__image.user-header__image--welcome
-						img.user-header__avatar(src="./assets/images/me.jpg", alt="my_photo")
-					h3.user-header__title.user-header__title--welcome Александр Клименко
-					.user-header__text.user-header__text--welcome
-						p Личный сайт веб разработчика
-				+social('social-welcome')
-				+welcomeMenu('menu-welcome')
+			.block-main.flip-container
+				.flipper
+					.front
+						.welcome-filter
+						.user-header.user-header--welcome
+							.user-header__image.user-header__image--welcome
+								img.user-header__avatar(src="./assets/images/me.jpg", alt="my_photo")
+							h3.user-header__title.user-header__title--welcome Александр Клименко
+							.user-header__text.user-header__text--welcome
+								p Личный сайт веб разработчика
+						+social('social-welcome')
+						+welcomeMenu('menu-welcome')
+					.back
+						.welcome-filter
+						form.login-form
+							h2.block-subtitle--login Авторизуйтесь
+							.login-form__inputs
+								input.login-form__input#test(type="text" placeholder="Логин" name="contactName" required="required")
+								.svg-wrapp__login
+									svg(width="15" height="15" class="login__svg login__svg--login")
+										use(xlink:href="./assets/images/sprite.svg#login")
+								input.login-form__input#test(type="text" placeholder="Пароль" name="contactName" required="required")
+								.svg-wrapp__pass
+									svg(width="15" height="15" class="login__svg login__svg--password")
+										use(xlink:href="./assets/images/sprite.svg#password")
+							.login-form__checkbox
+								label(class="login-checkbox__label" for="input1")
+									input(type="checkbox" class="login-checkbox__input" id="input1")
+									.input-img
+										svg(width="15" height="18" class="checkbox__svg checkbox__svg--check")
+											use(xlink:href="./assets/images/sprite.svg#check")
+									.input-text.input-text__checkbox Я человек
+							.login-form__question Вы точно не робот?
+							.login-form__radio
+								label(class="label" for="inputradio1")
+									input(type="radio" name="radio" class="login-radio__input" id="inputradio1")
+									.input-pic.radio
+									.input-text.input-text__radio Да
+								label(class="label" for="inputradio2")
+									input(type="radio" name="radio" class="login-radio__input" id="inputradio2" checked)
+									.input-pic.radio
+									.input-text.input-text__radio Не увернен
+							.login-form__menu
+								a.login-form__link(href="#") На главную
+								a.login-form__link(href="#") Войти
 			footer.footer-welcome
 				.footer-text
 					p © Александр Клименко | создано с любовью в LoftSchool | 2017

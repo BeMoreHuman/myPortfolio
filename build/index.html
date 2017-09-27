@@ -17,37 +17,87 @@
       <div class="maincontent">
         <div class="section welcome">
           <div class="login"><a class="login__btn login__btn_welcome" href="#">Авторизоваться</a></div>
-          <div class="block-main">
-            <div class="user-header">
-              <div class="user-header__image user-header__image--welcome"><img class="user-header__avatar" src="assets/images/me.jpg" alt="my_photo"></div>
-              <h3 class="user-header__title user-header__title--welcome">Александр Клименко</h3>
-              <div class="user-header__text user-header__text--welcome">
-                <p>Личный сайт веб разработчика</p>
+          <div class="block-main flip-container">
+            <div class="flipper">
+              <div class="front">
+                <div class="welcome-filter"></div>
+                <div class="user-header user-header--welcome">
+                  <div class="user-header__image user-header__image--welcome"><img class="user-header__avatar" src="./assets/images/me.jpg" alt="my_photo"></div>
+                  <h3 class="user-header__title user-header__title--welcome">Александр Клименко</h3>
+                  <div class="user-header__text user-header__text--welcome">
+                    <p>Личный сайт веб разработчика</p>
+                  </div>
+                </div>
+                <div class="social-welcome">
+                  <ul class="social-welcome__list">
+                    <li class="social-welcome__item"><a class="social-welcome__link" href="https://new.vk.com/id18787062">
+                        <svg class="social-welcome__svg social-welcome__svg-vk" width="100" height="100">
+                          <use xlink:href="./assets/images/sprite.svg#vk"></use>
+                        </svg></a></li>
+                    <li class="social-welcome__item"><a class="social-welcome__link" href="https://github.com/BeMoreHuman">
+                        <svg class="social-welcome__svg social-welcome__svg-github" width="100" height="100">
+                          <use xlink:href="./assets/images/sprite.svg#github"></use>
+                        </svg></a></li>
+                    <li class="social-welcome__item"><a class="social-welcome__link" href="https://www.linkedin.com/in/alexandr-klymenko-069561128/">
+                        <svg class="social-welcome__svg social-welcome__svg-in" width="100" height="100">
+                          <use xlink:href="./assets/images/sprite.svg#in"></use>
+                        </svg></a></li>
+                  </ul>
+                </div>
+                <nav class="menu-welcome">
+                  <ul class="menu-welcome__list">
+                    <li class="menu-welcome__item"><a class="menu-welcome__link" href="./my-works.html">Мои Работы</a></li>
+                    <li class="menu-welcome__item"><a class="menu-welcome__link" href="./about.html">Обо Мне</a></li>
+                    <li class="menu-welcome__item"><a class="menu-welcome__link" href="./blog.html">Блог</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="back">
+                <div class="welcome-filter"></div>
+                <form class="login-form">
+                  <h2 class="block-subtitle--login">Авторизуйтесь</h2>
+                  <div class="login-form__inputs">
+                    <input class="login-form__input" id="test" type="text" placeholder="Логин" name="contactName" required="required">
+                    <div class="svg-wrapp__login">
+                      <svg class="login__svg login__svg--login" width="15" height="15">
+                        <use xlink:href="./assets/images/sprite.svg#login"></use>
+                      </svg>
+                    </div>
+                    <input class="login-form__input" id="test" type="text" placeholder="Пароль" name="contactName" required="required">
+                    <div class="svg-wrapp__pass">
+                      <svg class="login__svg login__svg--password" width="15" height="15">
+                        <use xlink:href="./assets/images/sprite.svg#password"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="login-form__checkbox">
+                    <label class="login-checkbox__label" for="input1">
+                      <input class="login-checkbox__input" type="checkbox" id="input1">
+                      <div class="input-img">
+                        <svg class="checkbox__svg checkbox__svg--check" width="15" height="18">
+                          <use xlink:href="./assets/images/sprite.svg#check"></use>
+                        </svg>
+                      </div>
+                      <div class="input-text input-text__checkbox">Я человек</div>
+                    </label>
+                  </div>
+                  <div class="login-form__question">Вы точно не робот?</div>
+                  <div class="login-form__radio">
+                    <label class="label" for="inputradio1">
+                      <input class="login-radio__input" type="radio" name="radio" id="inputradio1">
+                      <div class="input-pic radio"></div>
+                      <div class="input-text input-text__radio">Да</div>
+                    </label>
+                    <label class="label" for="inputradio2">
+                      <input class="login-radio__input" type="radio" name="radio" id="inputradio2" checked>
+                      <div class="input-pic radio"></div>
+                      <div class="input-text input-text__radio">Не увернен</div>
+                    </label>
+                  </div>
+                  <div class="login-form__menu"><a class="login-form__link" href="#">На главную</a><a class="login-form__link" href="#">Войти</a></div>
+                </form>
               </div>
             </div>
-            <div class="social-welcome">
-              <ul class="social-welcome__list">
-                <li class="social-welcome__item"><a class="social-welcome__link" href="https://new.vk.com/id18787062">
-                    <svg class="social-welcome__svg social-welcome__svg-vk" width="100" height="100">
-                      <use xlink:href="./assets/images/sprite.svg#vk"></use>
-                    </svg></a></li>
-                <li class="social-welcome__item"><a class="social-welcome__link" href="https://github.com/BeMoreHuman">
-                    <svg class="social-welcome__svg social-welcome__svg-github" width="100" height="100">
-                      <use xlink:href="./assets/images/sprite.svg#github"></use>
-                    </svg></a></li>
-                <li class="social-welcome__item"><a class="social-welcome__link" href="https://www.linkedin.com/in/alexandr-klymenko-069561128/">
-                    <svg class="social-welcome__svg social-welcome__svg-in" width="100" height="100">
-                      <use xlink:href="./assets/images/sprite.svg#in"></use>
-                    </svg></a></li>
-              </ul>
-            </div>
-            <nav class="menu-welcome">
-              <ul class="menu-welcome__list">
-                <li class="menu-welcome__item"><a class="menu-welcome__link" href="./my-works.html">Мои Работы</a></li>
-                <li class="menu-welcome__item"><a class="menu-welcome__link" href="./about.html">Обо Мне</a></li>
-                <li class="menu-welcome__item"><a class="menu-welcome__link" href="./blog.html">Блог</a></li>
-              </ul>
-            </nav>
           </div>
           <footer class="footer-welcome">
             <div class="footer-text">

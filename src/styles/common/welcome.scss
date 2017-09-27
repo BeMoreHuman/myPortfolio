@@ -42,9 +42,15 @@
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    opacity: .85;
     overflow: hidden;
-    background: #FFFFFF;
+}
+
+.welcome-filter {
+    background: #fff;
+    opacity: .85;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 //block about user
@@ -54,6 +60,11 @@
     align-items: center;
     width: 100%;
     height: fit-content;
+}
+
+.user-header--welcome {
+    padding: 0 46px;
+    position: relative;
 }
 //вынести в общий
 .user-header__image {
@@ -74,7 +85,6 @@
 
 .user-header__title--welcome {
     color: $main;
-    padding: 0 48px;
     margin-top: 15px;
 }
 //вынести в общий
@@ -100,4 +110,291 @@
 .footer-text {
     color: #fff;
     font-weight: 200;
+}
+
+.autorisation {
+    position: absolute;
+}
+/////////////////////////////////////////////////////
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+/* flip the pane when hovered */
+.login:hover+.flip-container .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 380px;
+	height: 405px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+///////////////////////////////////////
+.login-form {
+	position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3px 3px 0 0;
+}
+
+.block-subtitle--login {
+    position: relative;
+    font-family: 'Bernier';
+    font-weight: 400;
+    font-size: 35px;
+    margin: 20px 0;
+
+    &:before {
+		display: block;
+		content: " ";
+		position: absolute;
+		width: 20px;
+		background-color: $dark;
+		height: 5px;
+		transform: translate(-150%, 150%);
+		top: 15px;
+		left: 0;
+		opacity: .2;
+	}
+
+	&:after {
+		display: block;
+		content: " ";
+		position: absolute;
+		width: 20px;
+		background-color: $dark;
+		height: 5px;
+		transform: translate(100%, 150%);
+		top: 15px;
+		right: -10px;
+		opacity: .2;
+	}
+}
+
+.login-form__inputs {
+	width: 100%;
+    padding: 0 20px;
+    position: relative;
+}
+
+.login-form__input {
+	width: 100%;
+    padding: 12px 20px 12px 55px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    outline: 0;
+    border-radius: 3px;
+    transition: border .3s;
+    background-color: #fff;
+}
+//btn
+.login-form__menu {
+	display: flex;
+    width: 100%;
+    margin-top: 41px;
+}
+
+.login-form__link {
+    flex-grow: 1;
+    flex-basis: 50%;
+    outline: 0;
+    border: 0;
+    display: block;
+    font-weight: 500;
+    padding: 12.5px 25px;
+    background-color: $accent;
+    transition: .3s;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border-right: 2px solid #82cfc9;
+    text-decoration: none;
+	
+	&:hover {
+		background-color: $hov;
+	}
+
+	&:first-child {
+		border-bottom-left-radius: 5px;
+	}
+
+	&:last-child {
+		border-right: none;
+		border-bottom-right-radius: 5px;
+	}
+}
+
+.login-form__input::-webkit-input-placeholder { 
+    opacity: .5; 
+}
+
+.svg-wrapp__login {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0efe9;
+    width: 40px;
+    height: 44px;
+    border-radius: 3px 0 0 3px;
+}
+
+.login__svg {
+    fill: #c4cbcd;
+}
+
+.svg-wrapp__pass {
+    position: absolute;
+    top: 64px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0efe9;
+    width: 40px;
+    height: 44px;
+    border-radius: 3px 0 0 3px;
+}
+//checkbox
+.login-form__checkbox {
+    position: relative;
+}
+
+.login-checkbox__label {
+    position: relative;
+    display: block;	
+}
+
+.login-checkbox__input {
+    position: absolute;
+    left: -9999px;
+}
+
+.login-checkbox__input:checked + .input-img .checkbox__svg--check {
+    opacity: 1;
+}
+
+.input-img {
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    background: $accent;
+}
+
+.input-text {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.checkbox__svg {
+    fill: #fff;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.login-form__question {
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+//radio
+.login-form__radio {
+    display: flex;
+    margin-top: 10px;
+}
+
+.label {
+    position: relative;
+    display: block;
+    margin: 0 20px;
+}
+
+.label:hover {
+    cursor: pointer;
+}
+
+.label:hover > .input-pic:after{
+    border-radius: 50%;
+}
+
+.login-radio__input {
+    position: absolute;
+    left: -9999px;
+}
+
+.login-radio__input:checked + .radio {
+    background: white;
+}
+
+.login-radio__input:checked + .input-pic:after {
+    background: white;
+    border-radius: 50%;
+}
+
+.login-radio__input:checked + .radio:after {
+    background: #00bfa5;
+}
+
+.login-radio__input:checked ~ .input-text__radio {
+    color: #00bfa5;
+}
+
+.input-pic {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #cccdcd;
+    display: inline-block;
+    position: relative;
+    background: #fff;
+}
+
+.radio {
+    border-radius: 50%;
+}
+
+.input-pic:after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
 }
