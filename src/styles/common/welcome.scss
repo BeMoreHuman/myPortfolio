@@ -222,14 +222,14 @@
 }
 //btn
 .login-form__menu {
-	display: flex;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     margin-top: 41px;
 }
 
 .login-form__link {
-    flex-grow: 1;
-    flex-basis: 50%;
+    flex-basis: 49.8%;
     outline: 0;
     border: 0;
     display: block;
@@ -240,7 +240,6 @@
     color: #fff;
     text-align: center;
     cursor: pointer;
-    border-right: 2px solid #82cfc9;
     text-decoration: none;
 	
 	&:hover {

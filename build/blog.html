@@ -9,7 +9,6 @@
     <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
     <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/styles/app.min.css">
-    <script src="./assets/scripts/bundle.js" defer></script>
     <title>Мой блог!</title>
   </head>
   <body>
@@ -47,7 +46,19 @@
             </div>
           </div>
         </div>
-        <div class="hamburger hero__menu"></div>
+        <div class="hamburger hero__menu">
+          <div class="button_container" id="toggle"><span class="button_container__item button_container--top"></span><span class="button_container__item button_container--middle"></span><span class="button_container__item button_container--bottom"></span></div>
+          <div class="overlay" id="overlay">
+            <nav class="overlay-menu">
+              <ul class="overlay-menu__list">
+                <li class="overlay-menu__item"><a class="overlay-menu__link" href="./my-works.html">Мои работы</a></li>
+                <li class="overlay-menu__item"><a class="overlay-menu__link" href="./blog.html">Блог</a></li>
+                <li class="overlay-menu__item"><a class="overlay-menu__link" href="./about.html">Обо мне</a></li>
+                <li class="overlay-menu__item"><a class="overlay-menu__link" href="./index.html">Авторизация</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </section>
       <section class="section blog">
         <div class="triangle">
@@ -56,17 +67,17 @@
             <polygon points="1000,0   1000,86   500,86   500,75.5"></polygon>
           </svg>
         </div>
-        <div class="blog-menu__wrap">
+        <aside class="sidebar">
           <nav class="blog-menu">
             <ul class="blog-menu__list">
-              <li class="blog-menu__item blog-menu__itemActive"><a class="blog-menu__link">Самое важное в SASS</a></li>
+              <li class="blog-menu__item blog-menu__item--active"><a class="blog-menu__link">Самое важное в SASS</a></li>
               <li class="blog-menu__item"><a class="blog-menu__link">Приёмы в вёрстке, без которых не обходится ни один сайт</a></li>
               <li class="blog-menu__item"><a class="blog-menu__link">Самый необходимый набор Gulp плагинов</a></li>
               <li class="blog-menu__item"><a class="blog-menu__link">Почему я выбрал Jade</a></li>
             </ul>
           </nav>
-        </div>
-        <div class="blog-post__wrap">
+        </aside>
+        <main class="content">
           <ul class="blog-post__list">
             <li class="blog-post__item">
               <h2 class="block-subtitle blog-post__title">Самое важное в SASS</h2>
@@ -84,8 +95,16 @@
                 <p>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
               </div>
             </li>
+            <li class="blog-post__item">
+              <h2 class="block-subtitle blog-post__title">Самое важное в SASS</h2>
+              <div class="blog-post__date">22 ноября 2016</div>
+              <div class="blog-post__text text-content">
+                <p>Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.</p>
+                <p>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+              </div>
+            </li>
           </ul>
-        </div>
+        </main>
       </section>
       <footer class="map__footer footer">
         <div class="footer__row">
@@ -136,5 +155,6 @@
         </div>
       </footer>
     </div>
+    <script src="./assets/scripts/bundle.js" defer></script>
   </body>
 </html>

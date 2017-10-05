@@ -16,10 +16,10 @@ function goToSlide(n){
 function setupListners(){
     next.onclick = function(){
         goToSlide(currentSlide+1);
-    }   
+    };  
     previous.onclick = function(){
         goToSlide(currentSlide-1);
-    }
+    };
 }
 
 // показывает кнопки для навигации

@@ -19,6 +19,21 @@ block content
 					.user-header__text
 						p Личный сайт веб разработчика
 		.hamburger.hero__menu
+			.button_container#toggle
+				span.button_container__item.button_container--top
+				span.button_container__item.button_container--middle
+				span.button_container__item.button_container--bottom
+			.overlay#overlay
+				nav.overlay-menu
+					ul.overlay-menu__list
+						li.overlay-menu__item
+							a.overlay-menu__link(href="./my-works.html") Мои работы
+						li.overlay-menu__item
+								a.overlay-menu__link(href="./blog.html") Блог
+						li.overlay-menu__item
+								a.overlay-menu__link(href="./about.html") Обо мне
+						li.overlay-menu__item
+								a.overlay-menu__link(href="./index.html") Авторизация
 		.arrow-down
 			a.hero__scroll-btn(href="#")
 				svg(width="100" height="100" class="hero__scroll-btn--arrow_down")
