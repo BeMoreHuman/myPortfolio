@@ -39,7 +39,7 @@
 	fill: #fff;
 	fill-opacity: .06;
 	width: 100%;
-	height: 314px;
+	height: rem(314px);
 }
 
 .user {
@@ -55,8 +55,8 @@
 .hero__scroll-btn--arrow_down {
 	fill: #fff;
 	fill-opacity: .7;
-	width: 25px;
-	height: 16px;
+	width: rem(25px);
+	height: rem(16px);
 	transition: .3s ease;
 
 	&:hover {
@@ -71,12 +71,22 @@
 	width: 100%;
 	background-color: #BDB8B8;
 	display: flex;
+
+	@include desktop {
+		height: 100%;
+	}
 }
 //left
 .about__left {
 	display: flex;
 	flex-basis: 50%;
 	background-color: #efeee9;
+
+	@include desktop {
+		flex-direction: column;
+		float: left;
+		width: 50%;
+	}
 }
 //треугольники
 .triangle {
@@ -101,26 +111,30 @@
 	flex-basis: 50%;
 	align-items: flex-start;
 	justify-content: center;
+
+	@include desktop {
+		flex-basis: initial;
+	}
 }
 //вынести в общий - это Заголовки
 .block-title {
 	display: flex;
 	font-family: 'Bernier';
 	font-weight: 500;
-	font-size: 63px;
+	font-size: rem(63px);
 	color: $dark;
-	margin: 70px 0;
+	margin: rem(70px) 0;
 	position: relative;
 
 	&:before {
 		display: block;
 		content: " ";
 		position: absolute;
-		width: 20px;
+		width: rem(20px);
 		background-color: $dark;
-		height: 5px;
+		height: rem(5px);
 		transform: translate(-150%, 150%);
-		top: 34px;
+		top: rem(34px);
 		left: 0;
 		opacity: .2;
 	}
@@ -129,19 +143,23 @@
 		display: block;
 		content: " ";
 		position: absolute;
-		width: 20px;
+		width: rem(20px);
 		background-color: $dark;
-		height: 5px;
+		height: rem(5px);
 		transform: translate(150%, 150%);
-		top: 34px;
+		top: rem(34px);
 		right: 0;
 		opacity: .2;
+	}
+
+	@include desktop {
+		margin: 0;
 	}
 }
 //надпись about
 .section-title__pic--about_header {
-	width: 320px;
-    height: 130px;
+	width: rem(320px);
+    height: rem(130px);
 	fill: #6d7070;
 	fill-opacity: .07;
 	position: absolute;
@@ -153,43 +171,61 @@
 .about__left-content {
 	display: flex;
 	flex-basis: 50%;
+
+	@include desktop {
+		flex-basis: initial;
+		justify-content: center;
+	}
 }
 
 .user-description {
 	display: flex;
 	flex-direction: column;
-	margin: 70px 20px;
+	margin: rem(70px) rem(20px);
 }
 
 .user-description__image {
 	display: block;
+
+	@include desktop {
+		text-align: center;
+	}
 }
 
 .user-description__avatar {
 	width: 100%;
+
+	@include desktop {
+		width: auto;
+	}
 }
 
 .user-description__title {
 	display: flex;
 	justify-content: center;
+
+	@include desktop {
+		display: inline-block;
+		text-align: center;
+	}
 }
 //вынести в общий --- Подзаголовок
 .block-subtitle {
 	position: relative;
 	font-family: 'Bernier';
 	font-weight: 400;
-	font-size: 35px;
-	margin: 40px 0;
+	font-size: rem(35px);
+	margin: rem(40px) 0;
 
 	&:before {
 		display: block;
 		content: " ";
 		position: absolute;
-		width: 20px;
+		width: rem(20px);
 		background-color: $dark;
-		height: 5px;
+		height: rem(5px);
 		transform: translate(-150%, 150%);
-		top: 15px;
+		top: rem(15px);
 		left: 0;
 		opacity: .2;
 	}
@@ -198,18 +234,26 @@
 		display: block;
 		content: " ";
 		position: absolute;
-		width: 20px;
+		width: rem(20px);
 		background-color: $dark;
-		height: 5px;
+		height: rem(5px);
 		transform: translate(100%, 150%);
-		top: 15px;
-		right: -10px;
+		top: rem(15px);
+		right: rem(-10px);
 		opacity: .2;
 	}
+
+	@include desktop {
+		display: inline-block;
+	}
+}
+
+.user-description__text.text-content {
+	max-width: rem(415px);
 }
 //вынести в общий
 .text-content p {
-	margin-top: 20px;
+	margin-top: rem(20px);
 }
 
 //right
@@ -218,33 +262,39 @@
 	flex-basis: 50%;
 	flex-direction: column;
 	background-color: #eeebdf;
-	padding: 30px 40px;
+	padding: rem(30px) rem(40px);
+
+	@include desktop {
+		float: left;
+		width: 50%;
+		padding: rem(30px) rem(20px);
+	}
 }
 
 .about__right-title {
-	width: 220px;
+	width: rem(220px);
     text-align: center;
     margin: 0 auto;
 }
 
 .about__right-content {
 	display: flex;
-	margin-top: 60px;
+	margin-top: rem(60px);
 }
 
 .skills-list {
     width: 100%;
-    padding: 0 15px;
+    padding: 0 rem(15px);
 }
 
 .skills-list__item {
-    margin-bottom: 15px;
+    margin-bottom: rem(15px);
 }
 
 .skills-row__title {
     font-weight: 500;
-    font-size: 28px;
-    margin-bottom: 10px;
+    font-size: rem(28px);
+    margin-bottom: rem(10px);
 }
 
 .skills-row__list {
@@ -254,12 +304,12 @@
 }
 
 .skills-row__item {
-    margin-right: 30px;
+    margin-right: rem(30px);
 }
 
 .skill {
-    width: 130px;
-    height: 130px;
+    width: rem(120px);
+    height: rem(120px);
     position: relative;
 }
 
@@ -400,15 +450,15 @@
 
 .block-subtitle--map {
 	color: $dark;
-    margin-bottom: 40px;
+    margin-bottom: rem(40px);
 }
 
 .contacts__list {
-	padding: 0 70px 0 40px;
+	padding: 0 rem(70px) 0 rem(40px);
 }
 
 .contacts__item {
-	margin-bottom: 20px;
+	margin-bottom: rem(20px);
 }
 
 .contacts-row {
@@ -417,10 +467,10 @@
 }
 
 .contacts-row__icon {
-	width: 24px;
-	height: 24px;
+	width: rem(24px);
+	height: rem(24px);
 	fill: $accent;
-	margin-right: 10px;
+	margin-right: rem(10px);
 }
 
 .contacts-row__content {
@@ -452,28 +502,28 @@
 }
 
 .social-bot {
-	margin: 15px 50px 0 0;
+	margin: rem(15px) rem(50px) 0 0;
 }
 
 .social-bot__svg {
-    margin: 0 13px;
+    margin: 0 rem(13px);
     fill: $accent;
     opacity: .5;
     transition: .3s ease;
 
     &-vk {
-        width: 31px;
-        height: 17px;
+        width: rem(31px);
+        height: rem(17px);
     }
 
     &-github {
-        width: 26px;
-        height: 22px;
+        width: rem(26px);
+        height: rem(22px);
     }
 
     &-in {
-        width: 24px;
-        height: 22px;
+        width: rem(24px);
+        height: rem(22px);
     }
 }
 
@@ -484,7 +534,7 @@
 .footer__col {
 	width: 100%;
 	flex-basis: 50%;
-	margin: 0 30px;
+	margin: 0 rem(30px);
 }
 
 .footer__col-left {
@@ -498,9 +548,9 @@
 }
 
 .footer__text {
-	width: 520px;
+	width: rem(520px);
 	color: #fff;
 	opacity: .5;
-	margin: 15px 0;
+	margin: rem(15px) 0;
 }
 

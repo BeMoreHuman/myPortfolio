@@ -13,7 +13,7 @@
 }
 
 .social-bottom__link {
-	margin: 0 13px;
+	margin: 0 rem(13px);
 }
 
 .social-bottom__svg {
@@ -22,18 +22,18 @@
 	transition: .3s ease;
 
 	&-vk {
-		width: 31px;
-		height: 17px;
+		width: rem(31px);
+		height: rem(17px);
 	}
 
 	&-github {
-		width: 26px;
-		height: 22px;
+		width: rem(26px);
+		height: rem(22px);
 	}
 
 	&-in {
-		width: 24px;
-		height: 22px;
+		width: rem(24px);
+		height: rem(22px);
 	}
 }
 

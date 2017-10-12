@@ -1,0 +1,63 @@
+.section-parallax {
+    height: 100vh;
+    position: relative;
+    min-height: 650px;
+}
+
+.heros__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1270px;
+    // position: relative;
+}
+
+.hero__bg--img {
+    display: block;
+    max-width: 180%;
+}
+
+.heros__section {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.heros__section--img {
+    opacity: .06;
+}
+
+.heros__user {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.heros__user-avatar {
+    background-image: url('../images/ava.png');
+    width: 141px;
+    height: 141px;
+    display: inline-block;
+}
+
+.heros__user-name {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    color: antiquewhite;
+}
+
+/*------------------------------ 2 section -----------------------------*/
+.section-next {
+    height: 100vh;
+    position: relative;
+    min-height: 650px;
+    background: linear-gradient(to right, rgba(30,87,153,1) 1%,rgba(125,185,232,1) 100%);
+}

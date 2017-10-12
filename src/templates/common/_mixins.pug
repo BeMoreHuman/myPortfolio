@@ -71,7 +71,7 @@ mixin skills(options)
                 ul.skills-row__list
                     each skill, skillName in item
                         li.skills-row__item.skill
-                            svg.skill__circle.circle(viewBox='0 0 110 110')
+                            svg.skill__circle.circle(viewBox='0 0 110 110' width=120 height=120)
                                 circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
                                 circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class=`circle__second circle-${skill}`)
                             h4.skill__title #{skillName}

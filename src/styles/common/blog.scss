@@ -13,8 +13,8 @@
 }
 
 .section-title__pic--blog_header {
-    width: 300px;
-    height: 210px;
+    width: rem(300px);
+    height: rem(210px);
 	fill: #fff;
 	fill-opacity: .07;
 	position: absolute;
@@ -44,8 +44,8 @@
     background-color: #fff;
     position: relative;
     height: auto;
-    padding-bottom: 170px;
-    padding-top: 25px;
+    padding-bottom: rem(170px);
+    padding-top: rem(25px);
     display: flex;
 }
 
@@ -67,7 +67,7 @@
 .blog-menu {
     width: 100%;
     text-align: right;
-    padding-right: 20px;
+    padding-right: rem(20px);
     position: relative;
     top: 0;
 }
@@ -75,7 +75,7 @@
 .blog-menu.fixed {
     left: 0;
     width: 30%;
-    padding: 0 20px;
+    padding: 0 rem(20px);
 }
 
 .fixed {
@@ -84,8 +84,8 @@
 }
 
 .blog-menu__list {
-    padding-left: 40px;
-    margin-top: 40px;
+    padding-left: rem(40px);
+    margin-top: rem(40px);
 }
 
 .blog-menu__item {
@@ -105,15 +105,15 @@
         width: 3px;
         background-color: $accent;
         height: 100%;
-        right: -15px;
+        right: -rem(15px);
         top: 0;
         }
 }
 
 .blog-menu__link {
     position: relative;
-    margin: 10px 0;
-    padding: 10px;
+    margin: rem(10px) 0;
+    padding: rem(10px);
     width: 100%;
 
     &:hover {
@@ -125,16 +125,16 @@
 .content {
     float: right;
     width: 70%;
-    padding-left: 100px;
+    padding-left: rem(100px);
 }
 
 .blog-post__list {
-    max-width: 884px;
+    max-width: rem(884px);
 }
 
 .blog-post__item {
     border-bottom: 3px solid rgba(55,62,66,.07);
-    padding-bottom: 70px;
+    padding-bottom: rem(70px);
 
     &:last-child {
         border: none;
@@ -142,7 +142,7 @@
 }
 
 .blog-post__title {
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
 
     &:before {
         display: none;
@@ -154,7 +154,7 @@
 }
 
 .blog-post__date {
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
     color: $accent;
     opacity: .7;
 }

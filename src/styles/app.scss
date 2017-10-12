@@ -1,5 +1,6 @@
 //config
 @import 'common/variables';
+@import 'common/_mixin';
 // Layout
 @import '_normalize';
 @import 'common/fonts';
@@ -13,9 +14,17 @@ body {
     font-family: 'Roboto';
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
+    font-size: rem(16px);
 	line-height: 1.42;
 	color: $main;
+
+	@include tablets {
+		font-size: rem(15px);
+	}
+
+	@include phones {
+		font-size: rem(13px);
+	}
 }
 
 *, *::before, *::after { 
@@ -61,3 +70,4 @@ h1, h2, h3, h4 {
 @import 'common/about';
 @import 'common/my-works';
 @import 'common/blog';
+@import 'common/_parallax';
